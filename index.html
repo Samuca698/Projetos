@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueMarket</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background: linear-gradient(90deg, #0f3d91, #3a7bd5);
+
+    color: white;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    color: #a7d8ff;
+}
+
+.btn-nav {
+
+    background: white;
+    color: #0f3d91;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+
+.hero {
+
+    height: 60vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(135deg, #0f3d91, #3a7bd5, #6dd5fa);
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.btn-hero {
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    background: white;
+
+    color: #0f3d91;
+
+    font-size: 16px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+
+.produtos {
+
+    padding: 60px;
+
+    text-align: center;
+}
+
+h3{
+    margin-top: 3%;
+}
+
+.grid-produtos {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 30px;
+}
+
+.card {
+
+    background: rgba(248, 248, 248, 0.863);
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+    padding-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    padding: 0 10px;
+}
+
+.card button {
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    border: none;
+
+    background: #3a7bd5;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+
+.footer {
+
+    margin-top: 60px;
+
+    background: #0f3d91;
+
+    color: white;
+
+    padding: 40px;
+}
+
+.footer-container {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    margin-bottom: 10px;
+}
+
+.copy {
+    text-align: center;
+    opacity: 0.7;
+}
+
+
+
+.banner {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 80px;
+
+    background: linear-gradient(120deg, #0f3d91, #3a7bd5, #6dd5fa);
+
+    color: white;
+    flex-wrap: wrap;
+
+}
+
+.banner-text {
+    max-width: 400px;
+}
+
+.banner-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner-btn {
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    background: white;
+
+    color: #0f3d91;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.banner-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+.img-animada {
+
+    animation: flutuar 3s infinite ease-in-out;
+    border-radius: 15px;
+}
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+
+
+.footer {
+
+    background: #0f3d91;
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: white;
+}
+
+.redes {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.redes a {
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.redes a:hover {
+
+    color: #6dd5fa;
+
+    transform: scale(1.2);
+
+}
+  
+</style>
+
+
+    <nav class="navbar">
+
+        <div class="logo">
+            BlueMarket
+        </div>
+
+
+    </nav>
+
+
+
+
+    <section class="banner">
+
+        <div class="banner-text">
+
+            <h1>Descubra os melhores produtos</h1>
+
+            <p>
+                Tecnologia, inovação e qualidade para você
+            </p>
+
+            <a href="#vidinha"><button class="banner-btn">
+                Ver ofertas
+            </button></a>
+
+        </div>
+
+        <div class="banner-img">
+
+            <img src="https://picsum.photos/500/350" class="img-animada">
+
+        </div>
+
+    </section>
+
+
+
+    <section class="produtos">
+
+        <h2 id="vidinha">Promoções</h2>
+        <h3>Se enteresse sobre algum produto ou enterresse em produtos novos com grandes descontos, entre em contato com o vendedor clicando no botão de compra.</h3>
+
+        <div class="grid-produtos">
+
+            <div class="card">
+                <img src="https://down-br.img.susercontent.com/file/sg-11134201-7ra0k-m58vbnvrgtpwf7.webp">
+                <h3>De R$1.249,00 por R$550,00</h3>
+                <p>Cadeira Gamer TGT Heron TC2 </p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_964227-MLA100071062557_122025-F.webp">
+                <h3>De R$1.458.00 por R$970.00</h3>
+                <p>Smartphone Infinix Smart 10 4gb Ram 256gb</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://down-br.img.susercontent.com/file/sg-11134201-82629-mlyzfitegjd142@resize_w450_nl.webp">
+                <h3>De R$140.40 por 120.00</h3>
+                <p>Liquidificador Philco 4 velocidades 2,7L 1050W PLQ11A</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://a-static.mlcdn.com.br/175x170/painel-de-tv-ate-75-polegadas-home-suspenso-dom-para-sala-e-quarto-mobler-mobler/macielsignorini/mspaidomcingri/fc2b9bb9fd305078e22571ad8f4cb5cf.jpeg">
+                <h3>De R$1.059.99 por R$799.99</h3>
+                <p>Painel De Tv Até 75 Polegadas Home Suspenso Dom Para Sala E Quarto Möbler</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://a-static.mlcdn.com.br/175x170/guarda-roupa-casal-com-espelho-4-gavetas-2-portas-de-correr-araplac-benfica/magazineluiza/238891800/888a8370abe54e4e817ecbb2bdd4e4e2.jpg">
+                <h3>De R$2.349.99 por R$1.999.99</h3>
+                <p>Guarda-roupa Casal com Espelho 4 Gavetas 2 Portas de Correr Araplac Benfica
+</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_775407-MLA99776749612_122025-F.webp">
+                <h3>De R$479.99 por R$349.99</h3>
+                <p>Fritadeira sem óleo air fryer 4L Mondial 1500W AFN-40-BFT</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://a-static.mlcdn.com.br/175x170/kit-cozinha-mondial-liquidificador-batedeira-e-espremedor-kt-105-b/pafeletroltda/mlb19770006/1bd3ffc6f1c86a819293ed56e9b6ac58.jpeg">
+                <h3>De R$794.99 por R$649.99</h3>
+                <p>Kit Cozinha Mondial Liquidificador Batedeira E Espremedor KT-105-B</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_626171-MLA95675086608_102025-F.webp">
+                <h3>De R$299.99 por R$220.00</h3>
+                <p>Jogo De Panelas 8 Peças Teflon Antiaderente C Tampa De Vidro Cor Ceramic</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-81ztc-mj7djb66b6km47@resize_w450_nl.webp">
+                <h3>De R$2.799.99 por R$2.199.99</h3>
+                <p>Ar Condicionado Philco 12.000 Btus Quente-frio Pac12qi 220v</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/71R7TGXKA0L._AC_SL1500_.jpg">
+                <h3>De R$469.99 por R$359.99</h3>
+                <p>Batedeira Planetária, Mondial, Branco, 700W, 110V - BP-03-W</p>
+                <a href="https://wa.me/5534984430841" target="_blank"><button>Comprar</button></a>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <footer class="footer">
+
+        <h2>BlueMarket</h2>
+
+        <p>
+            Entre em contato pelas nossas redes
+        </p>
+
+        <div class="redes">
+
+            <a href="https://www.instagram.com/smuca_zx?igsh=Nnc1N2w0a3d0MTBp">📷 Instagram</a>
+
+            <a href="https://wa.me/5534984430841" target="_blank">💬 WhatsApp</a>
+
+        </div>
+
+        <p class="copy">
+            © 2026 BlueMarket
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
