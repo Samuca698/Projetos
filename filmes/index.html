@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Movies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+
+        <div id="favoritos" class="navegador">
+
+            <h1>Blue Movies</h1>
+
+        </div>
+
+    </nav>
+
+            <img src="https://vermelho.org.br/wp-content/uploads/2023/06/uma-breve-historia-sobre-o-cinema.png" class="img-animada">
+
+            <p class="prim">Conheça os 10 melhores filmes do TMDB</p>
+    
+
+
+    <div id="filmes">
+
+    </div>
+
+
+    <footer class="pe">
+
+        <h2>Blue Movies</h2>
+
+        <p>© 2026 - Todos os direitos reservados</p>
+
+        <p>Dados fornecidos por <a href="https://www.themoviedb.org/?language=pt-BR" target="_blank">TMDB.</a></p>
+
+
+    </footer>
+
+
+    <script type="module">
+
+import getTop10Movies from './theMovie.js';
+
+window.addEventListener("DOMContentLoaded", () => {
+    getTop10Movies();
+});
+
+</script>
+
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+     overflow-x: hidden;
+  
+}
+
+nav{
+    background-color: rgb(7, 0, 36);
+    padding: 20px;
+    padding-bottom: 80px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; 
+    margin-bottom: -1%;
+}
+
+#filmes {
+    background-color: rgb(7, 0, 36);
+    margin-bottom: 10%;
+     margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 15px;
+    
+}
+
+
+.boxFilme {
+    
+   background-color: rgb(7, 0, 36);
+    margin-top: 5%;
+   
+    text-align: center;
+    width: 250px;
+    height: 550px;
+}
+
+
+
+.imagem {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imagem:hover{
+    transform: scale(1.1);
+}
+
+
+.pe {
+     background-color: rgb(7, 0, 36);
+    padding: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    margin-top: -4%; 
+    color: white;
+}
+
+.titulo{
+color: white;
+}
+
+.nota{
+color: white;
+}
+
+.genero{
+color: white;
+}
+
+.classificacao{
+color: white;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;        
+}
+
+h1{
+    color: white;
+    margin-left: -80%;
+    margin-top: 2.5%;
+    transition: 0.3 ease;
+    transition: transform 0.3 ease;
+     display: inline-block;
+}
+
+h1:hover{
+   color: rgb(197, 189, 189);
+   transform: scale(1.1);
+}
+
+.semi{
+    color: white;
+    font-size: 35px;
+    margin-top: 2%;
+}
+
+.inp{
+    margin-top: -116px;
+    margin-left: 74%;
+    width: 80px;
+    margin-bottom: 7%;
+    border-radius: 7px;
+}
+
+.img-animada {
+    width: 200px;
+    height: 110px;
+    border-radius: 10px 10px 0 0;
+    margin-top: -140px;
+    margin-bottom: 5%;
+    position: relative;
+    left: 82%;
+    transition: transform 0.3s ease;
+    animation: flutuar 3s infinite ease-in-out;
+    border-radius: 15px;
+}
+
+
+.img-animada:hover{
+    transform: scale(1.1);
+}
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+.prim{
+    font-size: 30px;
+    margin-left: 25%;
+    margin-bottom: -2%;
+transition: 0.3 ease;
+    transition: transform 0.3 ease;
+    font-family: "Bungee", sans-serif;
+}
+
+
+.prim:hover{
+color: rgb(48, 47, 47);
+   transform: scale(1.1);
+}
+
+
+    </style>
+
+</body>
+
+</html>
